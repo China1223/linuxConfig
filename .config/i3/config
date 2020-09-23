@@ -36,6 +36,7 @@ bindsym $mod+t exec i3-sensible-terminal
 bindsym Control+Mod1+t exec i3-sensible-terminal
 bindsym Control+Mod1+g exec google-chrome-stable 
 bindsym Control+Mod1+e exec google-chrome-stable 
+bindsym Mod1+e exec google-chrome-stable 
 bindsym Control+Mod1+b exec typora blog 
 bindsym $mod+g exec google-chrome-stable 
 # kill focused window
@@ -45,6 +46,7 @@ bindsym $mod+c kill
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
 bindsym $super+r exec dmenu_run
+# adjust the volume
 bindsym $super+Right exec amixer -qM set Master 5%+ umute 
 bindsym $super+Left exec amixer -qM set Master 5%- umute
 
@@ -55,6 +57,9 @@ bindsym $super+Left exec amixer -qM set Master 5%- umute
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
+# bindsym Mod1+Tab workspace next
+bindsym Mod1+Tab workspace next
+bindsym Mod1+Shift+Tab workspace prev
 # change focus
 bindsym $mod+j focus down
 bindsym $mod+k focus up 
@@ -98,7 +103,7 @@ bindsym $mod+f fullscreen toggle
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+m layout toggle split
-bindsym $mod+e layout toggle split
+# bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
